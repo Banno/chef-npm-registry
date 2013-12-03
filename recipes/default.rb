@@ -18,7 +18,7 @@
 #
 #
 
-node.default['npm_registry']['registry']['url'] = "http://localhost:#{node['couch_db']['config']['httpd']['port']}"
+node.default['npm_registry']['registry']['url'] = "http://#{node.default['couch_db']['config']['httpd']['bind_address']}:#{node.default['couch_db']['config']['httpd']['port']}"
 
 _npm_registry = node['npm_registry'];
 _git = _npm_registry['git']
