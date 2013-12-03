@@ -18,7 +18,7 @@
 #
 #
 
-node.default['npm_registry']['registry']['url'] = "#{!node['couch_db']['config']['couchdb']['httpsd'] ? 'http' : 'https'}://localhost:#{node['couch_db']['config']['httpd']['port']}"
+node.default['npm_registry']['registry']['url'] = "http://localhost:#{node['couch_db']['config']['httpd']['port']}"
 
 _npm_registry = node['npm_registry'];
 _git = _npm_registry['git']
