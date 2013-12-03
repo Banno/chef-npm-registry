@@ -20,9 +20,9 @@
 
 node.default['npm_registry']['registry']['url'] = "http://#{node.default['couch_db']['config']['httpd']['bind_address']}:#{node.default['couch_db']['config']['httpd']['port']}"
 
-_npm_registry = node['npm_registry']
+_npm_registry = node.default['npm_registry']
 _git = _npm_registry['git']
-_couch_db = node['couch_db']
+_couch_db = node.default['couch_db']
 _config = _couch_db['config']
 _httpd = _config['httpd']
 _couchdb = _config['couchdb']
